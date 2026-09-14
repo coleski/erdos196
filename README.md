@@ -1,13 +1,16 @@
 # Erdős problem 196: full negative resolution package
 
-The exact canonical theorem, full clean build, and independent formal-meaning
-audit have passed. The prior-work search is documented separately; local
-verification is not a claim of outside expert endorsement or publication.
+This repository publishes a complete negative solution of the original
+one-sided permutation question. The exact canonical theorem, full clean
+build, and independent AI-agent formal-meaning audit have passed. This is
+not yet a claim of Jig acceptance, journal acceptance, or outside expert
+endorsement. The prior-work search is documented separately.
 
 Start with [the complete proof](FINAL-HUMAN-PROOF.md),
 [the verification record](VERIFICATION.md),
 [the independent statement audit](FORMAL-STATEMENT-AUDIT.md), and
 [the prior-art audit](FINAL-PRIOR-ART-AUDIT.md).
+See also [publication and acceptance status](PUBLICATION-NOTE.md).
 
 ## Exact scope and answer
 
@@ -91,8 +94,8 @@ The construction and its formal proofs were developed in this research run
 by the assistant and cooperating AI agents. Independent AI-agent proof and
 meaning audits are not independent human-expert review. Public-source
 searches can establish the prior-work evidence checked, but cannot rule out
-unpublished or unindexed results. No remote verifier acceptance, public
-posting, GitHub publication, or outside expert endorsement is claimed.
+unpublished or unindexed results. Publication of this repository does not
+imply acceptance by a remote verifier, Jig, a journal, or outside experts.
 
 The bounded final search found no prior full resolution or competing full
 claim in the checked sources. Classical binary-order facts are credited in

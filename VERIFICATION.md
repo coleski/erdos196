@@ -8,8 +8,8 @@ All ten local Lean modules were copied as source into this newly created
 directory. No local compiled artifact was copied. The first build exposed a
 Lake configuration error: only the aggregator was registered as a library
 root, so Lake did not discover the other top-level modules. That attempt
-compiled no local proof module. Its log is retained as
-`BUILD-CONFIG-FAILURE.log`.
+compiled no local proof module. Its machine-specific failure log remains
+in the private local research package and is omitted from this repository.
 
 The configuration was corrected to enumerate all ten local modules. The
 subsequent `lake build` checked every one from source and exited 0, without
