@@ -1,7 +1,11 @@
 # Jig verification
 
-[Jig verified the refutation](https://jig.so/p/73?s=4) and closed the
-original question on 14 September 2026 at 03:53:20 UTC.
+[Jig mechanically verified this formalization](https://jig.so/p/73?s=4) on
+14 September 2026 at 03:53:20 UTC. Boon Suan Ho's
+[*A 4AP-free permutation of the positive integers*](https://arxiv.org/abs/2609.12780)
+was submitted on 11 September 2026 and has priority for the result. Jig's
+verification establishes formal correctness, not priority. This repository's
+proof was developed independently but published later.
 
 - [Complete verifier output](https://jig.so/api/artifacts/50b32c8b-0027-4024-ab4a-64cfc1081daa)
 - [Verification run](https://github.com/WoshuaJolk/jig-verifier/actions/runs/34803974764)

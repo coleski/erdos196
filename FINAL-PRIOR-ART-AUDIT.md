@@ -1,10 +1,33 @@
-# #196 final bounded prior-art and competing-claim audit
+# #196 prior-art audit — superseded
+
+## Correction added 14 September 2026
+
+The conclusion of the bounded search below is incorrect. Boon Suan Ho's
+[*A 4AP-free permutation of the positive integers*](https://arxiv.org/abs/2609.12780)
+was submitted to arXiv on 11 September 2026. It gives a full solution of the
+same original one-sided problem and predates this repository's initial public
+proof commit on 14 September 2026. Ho has priority for the resolution.
+
+The two proofs were found independently, but this repository's proof came
+after Ho's. Their central mechanisms are also closely related: both use a
+binary least-differing-bit order, safe finite prefixes, parity recursion, a
+coverage guard against mixed-parity progressions, and a nested limit covering
+all natural numbers. This repository makes no claim of priority or novelty.
+
+The original audit is retained below as a transparent record of a failed
+pre-publication search conducted during a narrow, nearly simultaneous
+publication window. It must not be cited as current evidence of novelty.
+
+## Superseded audit snapshot
 
 Snapshot: **2026-09-14, approximately 02:38 UTC** (2026-09-13 local workspace date).
 
 ## Conclusion and limits
 
-This independent bounded search found **no earlier full resolution or competing full-resolution claim** for the original question: existence of a one-sided bijective enumeration of all natural numbers avoiding both orientations of every nonconstant four-term arithmetic progression. This is evidence supporting a novelty claim, not an exhaustive certification of priority. Unindexed papers, private work, deleted or inaccessible repositories, and material published after this snapshot remain outside the audit.
+At the time of this search, no earlier full resolution or competing
+full-resolution claim was found. That negative finding was incomplete and has
+been superseded by the correction above; it provides no support for a novelty
+or priority claim.
 
 No public writes, accounts, proof submissions, issue comments or repository changes were made. Mathematical correctness of our final proof and its clean Lean build are separate verification tasks; this note does not replace them.
 
@@ -20,7 +43,7 @@ The full live [Jig73 markdown](https://jig.so/p/73) was independently fetched an
 
 [Jesse Geneson, *Density bounds for permutations avoiding monotone arithmetic progressions*, arXiv2608.12604v1, 12August2026](https://arxiv.org/html/2608.12604v1), was read through all sections and references. It improves three-term upper-density bounds and establishes a supremal four-term density parameter for subsets of the integers. The paragraph after Corollary1.3 expressly distinguishes those supremum results from an avoiding one-sided permutation of all naturals or integers.
 
-Its Section2 makes the classical nature of binary ordering explicit. In particular, no-monotone3AP and equal comparison of opposite pairs of a4AP are prior-art ingredients; they must **not** be advertised as discoveries here. Its four-term construction uses residue blocks and density gaps. No all-target finite-prefix extension theorem or fair adaptive-tail completion of every natural number was found in this paper. Our proposed new step is the finite adaptive extension/fair-chain construction, not the elementary binary identities.
+Its Section2 makes the classical nature of binary ordering explicit. In particular, no-monotone3AP and equal comparison of opposite pairs of a4AP are prior-art ingredients; they must **not** be advertised as discoveries here. Its four-term construction uses residue blocks and density gaps. No all-target finite-prefix extension theorem or fair adaptive-tail completion of every natural number was found in this paper. The adaptive extension/fair-chain construction was initially thought to be new, but that assessment is withdrawn in light of Ho's prior, closely related construction.
 
 ## Earlier constructions distinguished from the full target
 
@@ -55,4 +78,7 @@ The [cached edisonymy RESULTS.md search record](https://ithub.global.ssl.fastly.
 
 General web queries included the exact problem number with permutation/proof/solved/2026 terms; the full one-sided four-term avoidance description; arXiv-specific permutation/four-term searches; and adaptive parity / finite-extension wording. Searches led to the2026 paper, the older fixed-divisibility construction, the repositories above, standard expositions, and unrelated false-positive results. No new full claim emerged.
 
-This was not an authenticated GitHub code search, a complete scholarly citation-index survey, or consultation with authors. The assertion justified by the evidence is: **no existing full resolution was found in the live boards, relevant primary papers, GitHub issues/PRs and repositories actually checked**. Publication and priority should still be presented subject to outside mathematical and bibliographic review.
+This was not an authenticated GitHub code search, a complete scholarly
+citation-index survey, or consultation with authors. It failed to locate Ho's
+11 September submission before this repository was published. The corrected
+priority statement at the top of this document controls.

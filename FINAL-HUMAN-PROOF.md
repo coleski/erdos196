@@ -2,13 +2,25 @@
 
 14 September 2026 · [Lean formalization](Erdos196.lean) · [Jig](https://jig.so/p/73?s=4)
 
+**Priority note.** Boon Suan Ho's prior paper
+[*A 4AP-free permutation of the positive integers*](https://arxiv.org/abs/2609.12780)
+was submitted on 11 September 2026 and resolves the same problem. The proof
+below was found independently but later. No priority or novelty claim is made
+for this repository.
+
 ## Theorem
 
 There exists a bijection f from the nonnegative integers to themselves such that no four values of f, taken in increasing index order, form a nonconstant arithmetic progression in either numerical direction.
 
-This answers Erdős problem 196 negatively. Shifting both indices and values by one gives the equivalent positive-integer statement. The original question appears in Davis–Entringer–Graham–Simmons (1977), [*On permutations containing no long arithmetic progressions*](https://matwbn.icm.edu.pl/ksiazki/aa/aa34/aa3417.pdf), Acta Arithmetica 34, 81–90.
+This is the negative statement for Erdős problem 196, previously established
+by Ho. Shifting both indices and values by one gives the equivalent
+positive-integer statement. The original question appears in
+Davis–Entringer–Graham–Simmons (1977), [*On permutations containing no long arithmetic progressions*](https://matwbn.icm.edu.pl/ksiazki/aa/aa34/aa3417.pdf), Acta Arithmetica 34, 81–90.
 
-**Background.** The binary recursion, its three-term-progression avoidance, and the opposite-pair comparison identity are classical. [Geneson, *Density bounds for permutations avoiding monotone arithmetic progressions*, Section 2](https://arxiv.org/html/2608.12604v1#S2), credits Davis–Entringer–Graham–Simmons and Ardal–Brown–Jungić for the binary constructions and attributes the pair-comparison identity to Hirose–Saito. We use these ingredients to prove a finite-prefix extension lemma, then pass to a permutation of all nonnegative integers.
+**Background.** Ho's earlier solution uses a closely related binary-order,
+safe-prefix, parity-extension construction. The binary recursion, its
+three-term-progression avoidance, and the opposite-pair comparison identity
+are classical. [Geneson, *Density bounds for permutations avoiding monotone arithmetic progressions*, Section 2](https://arxiv.org/html/2608.12604v1#S2), credits Davis–Entringer–Graham–Simmons and Ardal–Brown–Jungić for the binary constructions and attributes the pair-comparison identity to Hirose–Saito. The independently developed argument below uses these ingredients to prove a finite-prefix extension lemma, then passes to a permutation of all nonnegative integers.
 
 Throughout, a time-ordered four-term progression means a tuple (u,v,w,z) of nonnegative integers satisfying
 
