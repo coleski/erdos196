@@ -21,8 +21,10 @@ progression. The positive-integer convention is also proved. This is not
 a fixed-size test, a statement about a subset, or a leftover of a known
 solution. It meets the mathematical scope of a full refutation.
 
-The sources are unchanged from the clean, audited proof package, as checked
-against `SOURCE-SHA256.txt`. Local kernel acceptance and source-meaning
+The initial published sources matched the clean, audited proof package.
+The later one-line library compatibility change is documented in
+[JIG-VERIFICATION.md](JIG-VERIFICATION.md); `SOURCE-SHA256.txt` tracks
+the current sources. Local kernel acceptance and source-meaning
 audits are documented; actual Jig acceptance and outside expert review have
 not occurred. Those are separate from mathematical completeness.
 

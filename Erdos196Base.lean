@@ -207,7 +207,7 @@ instance fixedLE_total (h : ℕ) : Std.Total (fixedLE h) where
 theorem pairwise_ordered {h : ℕ} {p : List ℕ}
     (hp : p.Pairwise (fixedLE h)) {x y : ℕ} (hx : x ∈ p) (hy : y ∈ p)
     (hxy : p.idxOf x < p.idxOf y) : fixedBefore h x y := by
-  have hz := hp.rel_getElem_of_lt (List.idxOf_lt_length_of_mem hx)
+  have hz := List.pairwise_iff_getElem.mp hp _ _ (List.idxOf_lt_length_of_mem hx)
     (List.idxOf_lt_length_of_mem hy) hxy
   simp only [List.getElem_idxOf] at hz
   rcases hz with he | hz

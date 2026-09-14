@@ -2,6 +2,10 @@
 
 Date: 2026-09-14 UTC (2026-09-13 America/Chicago).
 
+The clean-build and audit record below describes the initial public proof
+commit `43b5f6cc87173d30b24f71bd1763c43f6ce3eeea`. Subsequent compatibility
+verification is recorded in [JIG-VERIFICATION.md](JIG-VERIFICATION.md).
+
 ## Full clean proof build: PASS
 
 All ten local Lean modules were copied as source into this newly created

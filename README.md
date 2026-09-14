@@ -11,6 +11,8 @@ Start with [the complete proof](FINAL-HUMAN-PROOF.md),
 [the independent statement audit](FORMAL-STATEMENT-AUDIT.md), and
 [the prior-art audit](FINAL-PRIOR-ART-AUDIT.md).
 See also [publication and acceptance status](PUBLICATION-NOTE.md).
+The [Jig verification record](JIG-VERIFICATION.md) tracks submission and
+the one-line compatibility adjustment for Jig's older library version.
 
 ## Exact scope and answer
 
