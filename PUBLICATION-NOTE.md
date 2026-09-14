@@ -2,6 +2,13 @@
 
 Publication date: 14 September 2026 UTC (13 September in the workspace).
 
+**Update:** Jig verified the full proof and closed the original problem as
+refuted on 14 September 2026 at 03:53:20.739 UTC. See
+[the verified statement](https://jig.so/p/73?s=4) and
+[JIG-VERIFICATION.md](JIG-VERIFICATION.md). The publication-time observations
+below are retained as historical context; their pending-acceptance wording
+does not describe the current Jig status.
+
 The initial public proof commit is
 [`43b5f6cc87173d30b24f71bd1763c43f6ce3eeea`](https://github.com/coleski/erdos196/commit/43b5f6cc87173d30b24f71bd1763c43f6ce3eeea).
 Its publication was confirmed by reading the remote branch and fetching

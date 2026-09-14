@@ -2,9 +2,11 @@
 
 This repository publishes a complete negative solution of the original
 one-sided permutation question. The exact canonical theorem, full clean
-build, and independent AI-agent formal-meaning audit have passed. This is
-not yet a claim of Jig acceptance, journal acceptance, or outside expert
-endorsement. The prior-work search is documented separately.
+build, and independent AI-agent formal-meaning audit have passed.
+[Jig verified the full refutation and closed the problem](https://jig.so/p/73?s=4)
+on 14 September 2026 UTC, credited to `coleski`. This does not assert journal
+acceptance or outside human-expert endorsement. The prior-work search is
+documented separately.
 
 Start with [the complete proof](FINAL-HUMAN-PROOF.md),
 [the verification record](VERIFICATION.md),
@@ -96,8 +98,9 @@ The construction and its formal proofs were developed in this research run
 by the assistant and cooperating AI agents. Independent AI-agent proof and
 meaning audits are not independent human-expert review. Public-source
 searches can establish the prior-work evidence checked, but cannot rule out
-unpublished or unindexed results. Publication of this repository does not
-imply acceptance by a remote verifier, Jig, a journal, or outside experts.
+unpublished or unindexed results. Jig's remote kernel verification and full
+root closure are documented in `JIG-VERIFICATION.md`; no journal acceptance
+or outside human-expert endorsement is asserted.
 
 The bounded final search found no prior full resolution or competing full
 claim in the checked sources. Classical binary-order facts are credited in
