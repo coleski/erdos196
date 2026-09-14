@@ -73,6 +73,6 @@ The classical binary-order ingredients are attributed in the proof.
 ## Acknowledgments
 
 Thanks to Joshua Wolk for creating [Jig](https://jig.so), and to Declan
-Gessel for inspiring the competition.
+Gessel for inspiring this work.
 
 The proof and Lean formalization were developed with Codex.
