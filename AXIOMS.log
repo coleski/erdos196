@@ -1,0 +1,3 @@
+'Erdos196.erdos_196_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos196.erdos_196_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos196.erdos_196_positive_integers_negative' depends on axioms: [propext, Classical.choice, Quot.sound]

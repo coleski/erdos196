@@ -1,0 +1,18 @@
+✔ [8921/8931] Built Erdos196Core (14s)
+✔ [8922/8931] Built Erdos196Tree (18s)
+✔ [8923/8931] Built Erdos196Limit (18s)
+ℹ [8924/8931] Built Erdos196Correspondence (18s)
+info: Erdos196Correspondence.lean:100:0: 'Erdos196.avoiding_permutation_refutes_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos196Correspondence.lean:101:0: 'Erdos196.avoiding_permutation_refutes_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8925/8931] Built Erdos196Base (19s)
+info: Erdos196Base.lean:281:0: 'Erdos196.small_finite_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8926/8931] Built Erdos196Children (15s)
+✔ [8927/8931] Built Erdos196Assembly (15s)
+✔ [8928/8931] Built Erdos196ParityLift (16s)
+ℹ [8929/8931] Built Erdos196Extension (17s)
+info: Erdos196Extension.lean:101:0: 'Erdos196.original_question_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8930/8931] Built Erdos196 (17s)
+info: Erdos196.lean:20:0: 'Erdos196.erdos_196_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos196.lean:21:0: 'Erdos196.erdos_196_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos196.lean:22:0: 'Erdos196.erdos_196_positive_integers_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8931 jobs).
