@@ -1,65 +1,45 @@
-# Erdős problem 196: full negative resolution package
+# A permutation without monotone four-term arithmetic progressions
 
-This repository publishes a complete negative solution of the original
-one-sided permutation question. The exact canonical theorem, full clean
-build, and independent AI-agent formal-meaning audit have passed.
-[Jig verified the full refutation and closed the problem](https://jig.so/p/73?s=4)
-on 14 September 2026 UTC, credited to `coleski`. This does not assert journal
-acceptance or outside human-expert endorsement. The prior-work search is
-documented separately.
+We construct a permutation of the natural numbers containing no increasing
+or decreasing four-term arithmetic progression as a subsequence. This gives
+a negative answer to [Erdős problem 196](https://www.erdosproblems.com/196).
 
-Start with [the complete proof](FINAL-HUMAN-PROOF.md),
-[the verification record](VERIFICATION.md),
-[the independent statement audit](FORMAL-STATEMENT-AUDIT.md), and
-[the prior-art audit](FINAL-PRIOR-ART-AUDIT.md).
-See also [publication and acceptance status](PUBLICATION-NOTE.md).
-The [Jig verification record](JIG-VERIFICATION.md) tracks submission and
-the one-line compatibility adjustment for Jig's older library version.
+[Read the proof](FINAL-HUMAN-PROOF.md) ·
+[Lean formalization](Erdos196.lean) ·
+[Verified on Jig](https://jig.so/p/73?s=4)
 
-## Exact scope and answer
+## Theorem
 
-There exists a bijection `f : ℕ ≃ ℕ` such that no four indices `i < j < k < l`
-have values forming a nonconstant arithmetic progression, in either increasing
-or decreasing numerical order. The answer to the full original question is
-therefore **no**. This is one infinite, one-sided permutation, not unrelated
-finite examples, a two-sided order, or a special family of progressions.
+There exists a bijection $f : \mathbb{N} \to \mathbb{N}$ such that, for every
+$i < j < k < l$, the sequence
 
-The final theorems in `Erdos196.lean` are:
+$$f(i),\quad f(j),\quad f(k),\quad f(l)$$
 
-```lean
-theorem erdos_196_negative : ¬ (∀ f : ℕ ≃ ℕ, HasMonotoneAP f 4)
-theorem erdos_196_counterexample : ∃ f : ℕ ≃ ℕ, ¬ HasMonotoneAP f 4
-theorem erdos_196_positive_integers_negative : ¬ PositiveOriginalQuestion
-```
+is not a nonconstant arithmetic progression.
 
-The public AP definitions are reproduced with attribution in
-`Erdos196Correspondence.lean`. A checked equivalence handles both directions
-and the nominal zero-difference case; injectivity excludes that degeneracy.
-No public conjecture theorem or unproved placeholder is imported.
+Here $\mathbb{N} = \{0,1,2,\ldots\}$. Shifting both indices and values by one
+gives the equivalent statement for the positive integers.
 
-## Proof mechanism
+## Construction
 
-A finite prefix is certified against an adaptable binary-residue-tree tail.
-To extend it, first complete the nonpreferred parity child, obtaining a finite
-maximum `H`. Then complete the preferred child far enough to cover every
-preferred value through `2H`. Append the new preferred entries, then the new
-other entries. Every potential odd-difference progression would require a
-preferred tail value at most `2H`, which the coverage has excluded. Even
-differences are handled by the child proofs. Strong induction on the old
-prefix maximum proves extension for every requested bound. Nested fair
-extensions yield an actual bijection.
+The proof extends finite prefixes while maintaining an admissible
+binary-residue-tree order on the unused values. The two parity classes
+are extended in a prescribed order, with a coverage bound excluding
+odd-difference progressions; even-difference progressions reduce to the
+corresponding child orders.
 
-The complete standalone argument is in `FINAL-HUMAN-PROOF.md`.
+Strong induction on the maximum of the existing prefix gives extensions
+covering every prescribed finite interval. A nested sequence of these
+extensions yields the required permutation.
 
-## Reproduce
+The [proof](FINAL-HUMAN-PROOF.md) develops the extension lemma and the
+passage to the infinite permutation. The [formalization](Erdos196.lean)
+also proves equivalence with the public formulation of the problem.
 
-Pinned Lean: `leanprover/lean4:v4.34.0-rc2`.
+## Reproducing the formalization
 
-Pinned Mathlib: `141f6b6455959bfeb0b2a6b04118031191d62683`.
-Transitive dependency commits are recorded in `lake-manifest.json`.
-
-In a fresh directory containing the ten `.lean` source files, `lean-toolchain`,
-`lakefile.toml`, and `lake-manifest.json`, with Elan/Lake installed:
+With [Elan](https://github.com/leanprover/elan) installed, run from the
+repository root:
 
 ```sh
 lake exe cache get
@@ -67,43 +47,32 @@ lake build
 lake env lean Erdos196.lean
 ```
 
-The library configuration explicitly includes all ten local modules. The
-final command prints the axiom reports for all three final theorems. Only
-`propext`, `Classical.choice`, and `Quot.sound` are permitted; `sorryAx` or any
-custom mathematical axiom invalidates the claimed verification.
+The repository pins Lean `v4.34.0-rc2` and Mathlib
+`141f6b6455959bfeb0b2a6b04118031191d62683`.
+The final command prints the axiom dependencies of the three main theorems:
+`propext`, `Classical.choice`, and `Quot.sound`.
 
-The recorded build and all three final reports passed. See `VERIFICATION.md`,
-`CLEAN-BUILD.log`, `AXIOMS.log`, and `FORMAL-STATEMENT-AUDIT.md`.
+Jig independently checked the formalization against its pinned Lean
+`v4.33.0` environment. See the [verification record](JIG-VERIFICATION.md)
+for the exact source commit, toolchain, and verifier output.
 
-For the recorded clean build, no local `.olean` was copied. Only the pinned
-external Lean/Mathlib/dependency caches are reused. The `.lake/packages`
-symlink is a local convenience and is not needed for reproduction: obtain
-the pinned packages with Lake in a fresh directory instead. We do not claim
-to have rebuilt the Lean compiler or all Mathlib dependencies from source.
+## References
 
-## Source and novelty boundaries
+- Davis, Entringer, Graham, and Simmons,
+  [*On permutations containing no long arithmetic progressions*](https://matwbn.icm.edu.pl/ksiazki/aa/aa34/aa3417.pdf),
+  Acta Arithmetica 34 (1977), 81–90.
+- Geneson,
+  [*Density bounds for permutations avoiding monotone arithmetic progressions*](https://arxiv.org/html/2608.12604v1)
+  (2026).
+- [Formal Conjectures: Erdős problem 196](https://github.com/google-deepmind/formal-conjectures/blob/c252a41054125b5fd9c8356e2137cd9b55337657/FormalConjectures/ErdosProblems/196.lean).
 
-The original question is in Davis, Entringer, Graham, and Simmons,
-*On permutations containing no long arithmetic progressions*, Acta Arithmetica 34 (1977),
-pp. 81–90; the singly-infinite four-term question appears on pp. 85 and 88.
-That paper establishes unavoidable three-term and avoidable five-term
-progressions, and separately discusses two-sided four-term avoidance.
+The classical binary-order ingredients are attributed in the proof.
+[Literature notes](FINAL-PRIOR-ART-AUDIT.md) and
+[statement correspondence](CORRESPONDENCE-VERIFICATION.md) provide further detail.
 
-- [Original paper](https://matwbn.icm.edu.pl/ksiazki/aa/aa34/aa3417.pdf)
-- [Erdős problem 196](https://www.erdosproblems.com/196)
-- [Jig problem 73](https://jig.so/p/73)
-- [Canonical Formal Conjectures statement](https://github.com/google-deepmind/formal-conjectures/blob/c252a41054125b5fd9c8356e2137cd9b55337657/FormalConjectures/ErdosProblems/196.lean)
+## Acknowledgments
 
-The construction and its formal proofs were developed in this research run
-by the assistant and cooperating AI agents. Independent AI-agent proof and
-meaning audits are not independent human-expert review. Public-source
-searches can establish the prior-work evidence checked, but cannot rule out
-unpublished or unindexed results. Jig's remote kernel verification and full
-root closure are documented in `JIG-VERIFICATION.md`; no journal acceptance
-or outside human-expert endorsement is asserted.
+Thanks to Joshua Wolk for creating [Jig](https://jig.so), and to Declan
+Gessel for inspiring the competition.
 
-The bounded final search found no prior full resolution or competing full
-claim in the checked sources. Classical binary-order facts are credited in
-the proof; the new contribution is adaptive uniform finite-prefix extension
-and its fair completion. The August 2026 density results are not treated as
-solutions of the original question.
+The proof and Lean formalization were developed with Codex.

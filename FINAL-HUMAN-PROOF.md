@@ -1,14 +1,14 @@
 # A one-sided permutation with no monotone four-term arithmetic progression
 
-2026-09-13. Self-contained human proof aligned with the Lean development in `lean196/`. Final build, source-meaning review, and provenance checks are separate verification records; this document itself does not certify those checks or claim publication priority.
+14 September 2026 · [Lean formalization](Erdos196.lean) · [Jig](https://jig.so/p/73?s=4)
 
 ## Theorem
 
 There exists a bijection f from the nonnegative integers to themselves such that no four values of f, taken in increasing index order, form a nonconstant arithmetic progression in either numerical direction.
 
-Thus the answer to the original one-sided permutation question, Erdős problem 196, is negative. Adding 1 to every value gives the equivalent positive-integer statement. The original question is recorded in Davis–Entringer–Graham–Simmons (1977), *On permutations containing no long arithmetic progressions*, Acta Arithmetica 34, 81–90: https://matwbn.icm.edu.pl/ksiazki/aa/aa34/aa3417.pdf . The construction below produces order type omega, not merely an avoiding total order of a different order type.
+This answers Erdős problem 196 negatively. Shifting both indices and values by one gives the equivalent positive-integer statement. The original question appears in Davis–Entringer–Graham–Simmons (1977), [*On permutations containing no long arithmetic progressions*](https://matwbn.icm.edu.pl/ksiazki/aa/aa34/aa3417.pdf), Acta Arithmetica 34, 81–90.
 
-**Prior work.** The binary recursion, its three-term-progression avoidance, and the opposite-pair comparison identity are classical ingredients, not claimed as new here. [Geneson, *Density bounds for permutations avoiding monotone arithmetic progressions*, Section 2](https://arxiv.org/html/2608.12604v1#S2), credits Davis–Entringer–Graham–Simmons and Ardal–Brown–Jungić for the binary constructions and attributes the pair-comparison identity to Hirose–Saito. The contribution claimed in the present argument is the adaptive finite-prefix extension lemma and its fair completion to a permutation of all nonnegative integers. This is distinct from density-supremum results, which need not produce such a permutation.
+**Background.** The binary recursion, its three-term-progression avoidance, and the opposite-pair comparison identity are classical. [Geneson, *Density bounds for permutations avoiding monotone arithmetic progressions*, Section 2](https://arxiv.org/html/2608.12604v1#S2), credits Davis–Entringer–Graham–Simmons and Ardal–Brown–Jungić for the binary constructions and attributes the pair-comparison identity to Hirose–Saito. We use these ingredients to prove a finite-prefix extension lemma, then pass to a permutation of all nonnegative integers.
 
 Throughout, a time-ordered four-term progression means a tuple (u,v,w,z) of nonnegative integers satisfying
 
@@ -132,4 +132,4 @@ The proof is represented by the following modules and theorem interfaces. No fin
 - `Erdos196Extension.lean`: `admissible_finite_extension`, `exists_avoiding_permutation`, `original_question_false`.
 - `Erdos196Limit.lean`: `permutation_of_fair_chain` and `permutation_of_good_extensions` (Section 5).
 
-Build and axiom-audit records should be consulted separately to identify the exact verified source snapshot. This note is not a substitute for those records.
+See the [verification record](JIG-VERIFICATION.md) for the checked source version and axiom dependencies.

@@ -1,6 +1,6 @@
 # #196 canonical-statement and positive-convention correspondence
 
-2026-09-13. **Generic correspondence verified; this file does not assert that the full counterexample construction has been formally completed.**
+The correspondence lemmas connect the progression predicate used in the construction to the public statement and its positive-integer convention. The final theorem is in [Erdos196.lean](Erdos196.lean).
 
 ## Frozen public source
 
